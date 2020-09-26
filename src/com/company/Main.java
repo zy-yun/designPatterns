@@ -62,20 +62,20 @@ public class Main {
 //        System.out.println("单例模式之容器式单例："+(instance1==instance2));
 
         //防止序列化破坏单例模式测试
-        SeriableSingleton instanceRead = null;
-        SeriableSingleton instance = SeriableSingleton.getInstance();
-        FileOutputStream outputStream = new FileOutputStream("tt.obj");
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
-        objectOutputStream.writeObject(instance);
-        objectOutputStream.flush();
-        objectOutputStream.close();
-
-        FileInputStream fileInputStream = new FileInputStream("tt.obj");
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-        instanceRead = (SeriableSingleton)objectInputStream.readObject();
-        objectInputStream.close();
-
-        System.out.println("防止序列化破坏单例："+(instance==instanceRead));
+//        SeriableSingleton instanceRead = null;
+//        SeriableSingleton instance = SeriableSingleton.getInstance();
+//        FileOutputStream outputStream = new FileOutputStream("tt.obj");
+//        ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+//        objectOutputStream.writeObject(instance);
+//        objectOutputStream.flush();
+//        objectOutputStream.close();
+//
+//        FileInputStream fileInputStream = new FileInputStream("tt.obj");
+//        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+//        instanceRead = (SeriableSingleton)objectInputStream.readObject();
+//        objectInputStream.close();
+//
+//        System.out.println("防止序列化破坏单例："+(instance==instanceRead));
 
 
 
